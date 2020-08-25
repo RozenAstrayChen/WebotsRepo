@@ -1,0 +1,33 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  basicTimeStep 16
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.024011070428880604 0.9802902058446237 0.1960983957659138 2.33604939054585
+  position 5.6082931540899885 2.9913744971892875 -4.287936394124166
+}
+TexturedBackgroundLight {
+}
+TexturedBackground {
+}
+RectangleArena {
+  translation 0.999514 3.55271e-15 -0.694619
+  floorSize 5 5
+  floorTileSize 2 2
+}
+Irb4600-40 {
+  translation 0.0926221 3.0183e-07 -0.725001
+  rotation -1 -8.68423e-07 1.68044e-07 1.5708
+  controller "inverse"
+  supervisor TRUE
+  staticBase TRUE
+}
+Table {
+  translation 1.82684 -1.67422e-13 -1.05706
+  rotation 0 1 0 1.5708
+}
+DEF TARGET WoodenBox {
+  translation 1.90115 0.83 -1.04697
+  size 0.15 0.15 0.15
+}
