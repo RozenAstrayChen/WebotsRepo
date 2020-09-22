@@ -4,8 +4,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.024011070428880604 0.9802902058446237 0.1960983957659138 2.33604939054585
-  position 5.6082931540899885 2.9913744971892875 -4.287936394124166
+  orientation -0.02114497184924809 0.9827845195341336 0.183541489395604 2.30475396778472
+  position 7.1710815538807955 3.615501250642917 -5.820732778873577
 }
 TexturedBackgroundLight {
 }
@@ -17,10 +17,27 @@ RectangleArena {
   floorTileSize 2 2
 }
 Irb4600-40 {
+  hidden position_0_0 0.17497315901586363
+  hidden rotation_1 0 0 1 0.174973159015863
+  hidden position_1_0 0.36890834157754576
+  hidden rotation_2 0 1 0 0.3689083415775455
+  hidden position_2_0 -0.08281360790871699
+  hidden rotation_3 0 -0.9999999999999999 0 0.08281360790871756
+  hidden position_3_0 5.7526932449608376e-05
+  hidden rotation_4 0.9999999999999999 0 0 5.7526935874759834e-05
+  hidden position_4_0 7.242329213541532e-07
+  hidden rotation_5 0 1 0 7.24509106942611e-07
+  hidden position_5_0 2.117457055192658e-08
+  hidden rotation_6 1 0 0 2.9802322387695313e-08
   translation 0.0926221 3.0183e-07 -0.725001
   rotation -1 -8.68423e-07 1.68044e-07 1.5708
-  controller "inverse"
+  controller ""
   supervisor TRUE
+  handSlot [
+    Camera {
+      name "camera2"
+    }
+  ]
   staticBase TRUE
 }
 Table {
@@ -30,4 +47,13 @@ Table {
 DEF TARGET WoodenBox {
   translation 1.90115 0.83 -1.04697
   size 0.15 0.15 0.15
+}
+Robot {
+  children [
+    Camera {
+      translation 1.98 1.63 0
+      name "camera2"
+    }
+  ]
+  controller "camera"
 }

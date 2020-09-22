@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
+#     http://www.apache.org/licenses/LICENSE-1.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -26,6 +26,8 @@ except ImportError:
 
 import math
 from controller import Supervisor
+from controller import Robot
+from controller import Camera
 
 if ikpy.__version__[0] < '3':
     sys.exit('The "ikpy" Python module version is too old. '
@@ -88,7 +90,7 @@ for motorName in ['A motor', 'B motor', 'C motor', 'D motor', 'E motor', 'F moto
 target = supervisor.getFromDef('TARGET')
 arm = supervisor.getSelf()
 
-
+# add camera
 
 print('start find work space')
 # Loop 2: Move the arm hand to the target.
