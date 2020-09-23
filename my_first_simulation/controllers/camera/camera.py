@@ -40,5 +40,14 @@ if ikpy.__version__[0] < '3':
 
 robot = Robot()
 timestep = int(robot.getBasicTimeStep())
-camera = robot.getCamera('camera2')
+camera = robot.getCamera('upper_camera')
 camera.enable(4*timestep)
+#max = camera.getMaxFov()
+#min = camera.getMinFov()
+#camera.setFov(min)
+print(max, min)
+w = camera.getWidth()
+h = camera.getHeight()
+print(w, h)
+#camera.setFocalDistance(0.2) 
+
