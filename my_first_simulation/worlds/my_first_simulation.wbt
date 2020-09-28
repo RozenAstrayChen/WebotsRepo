@@ -4,8 +4,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.10002009304980096 0.9908914450165037 0.09016720678502907 2.231862350298178
-  position 5.222763807254706 2.831804326930144 -5.497612292803813
+  orientation -0.058755876580753166 0.7639151850161856 0.6426362400836994 3.140062295333285
+  position 1.6760207798910662 2.147720459452705 -1.4278677631489278
 }
 TexturedBackgroundLight {
 }
@@ -24,8 +24,8 @@ Table {
   translation 1.82684 -1.67422e-13 -1.05706
   rotation 0 1 0 1.5708
 }
-DEF TARGET WoodenBox {
-  translation 1.55315 0.83 -0.976308
+DEF target WoodenBox {
+  translation 2.02823 0.83 -0.462795
   size 0.15 0.15 0.15
 }
 Robot {
@@ -59,74 +59,18 @@ WoodenPalletStack {
   translation 0.843459 0 -0.918247
   palletNumber 5
 }
-UR5e {
-  hidden position_0_0 -0.00014721753590492257
-  hidden translation_1 0 0 0.163
-  hidden rotation_1 0 0 -1 0.00014721753617572133
-  hidden position_1_0 -1.8000385203019311
-  hidden translation_2 0 0.138 0
-  hidden rotation_2 0 -1 0 0.22924252030193137
-  hidden position_2_0 -1.6000270923135913
-  hidden translation_3 0 -0.131 0.425
-  hidden rotation_3 0 -1 0 1.6000270923135915
-  hidden position_3_0 -1.320003767140141
-  hidden translation_4 0 0 0.392
-  hidden rotation_4 0 1 0 0.25079223285985913
-  hidden position_4_0 1.5699997289586112
-  hidden translation_5 0 0.127 0
-  hidden rotation_5 0 0 1 1.5699997289586114
-  hidden position_5_0 0.20000000204847554
-  hidden translation_6 0 0 0.1
-  hidden rotation_6 0 1 0 0.20000000204847543
-  hidden position_7_0 -1.0684819002904078e-05
-  hidden position_7_1 1.068861977496969e-05
-  hidden position_7_2 0.04950006479841183
-  hidden translation_8 -0.0455 0.0214 0.036
-  hidden rotation_8 0.7068252250895053 0.7073882252176439 -7.761496087813881e-07 3.1415904416863794
-  hidden position_8_0 0.04951171650292953
-  hidden translation_9 0.02 0 0
-  hidden rotation_9 0 0 1 1.171644486149295e-05
-  hidden position_9_0 9.476175528000034e-09
-  hidden translation_10 0.05 -0.028 0
-  hidden rotation_10 0 0 -1 0.5199999905238246
-  hidden position_10_0 -0.05229999999997578
-  hidden translation_11 0.039 0 0
-  hidden translation_12 -0.0455 0.0214 -0.036
-  hidden rotation_12 0.7068252250223257 0.7073882252527282 6.777494760339588e-06 3.1416055610022418
-  hidden position_12_0 0.04951171725257103
-  hidden translation_13 0.02 0 0
-  hidden rotation_13 0 0 0.9999999999999999 1.1717240798891963e-05
-  hidden position_13_0 9.476640273990608e-09
-  hidden translation_14 0.05 -0.028 0
-  hidden rotation_14 0 0 -1 0.5199999905233599
-  hidden position_14_0 -0.052299999999976074
-  hidden translation_15 0.039 0 0
-  hidden translation_16 0.02 0 0
-  hidden rotation_16 0 0 1 6.664001874625056e-08
-  hidden position_16_0 9.556781689341424e-09
-  hidden translation_17 0.05 -0.028 0
-  hidden rotation_17 0 0 -1 0.5199999904432183
-  hidden position_17_0 -0.05230000000000444
-  hidden translation_18 0.039 0 0
-  translation 0.85 0.7 -0.81
-  rotation 0.09269161202564553 0.7040630913438982 0.7040620913437684 -2.9567453071795864
-  controller "<extern>"
-  supervisor TRUE
-  toolSlot [
-    Robotiq3fGripper {
-    }
-  ]
-}
-Solid {
-  translation 1.94 0.7898037996587555 -0.91
-  rotation 0.23686327761171785 0.9709535538814048 0.03383761108743052 -1.259916488651903e-16
+DEF target2 Solid {
+  translation 1.87805 0.774804 -1.23603
+  rotation -0.32910159325273297 0.7391364515382013 -0.5876814165226164 -1.8135916394067104e-16
+  scale 0.7 0.7 0.7
   children [
     Shape {
       appearance PBRAppearance {
         baseColor 0.9 0.4 1
       }
-      geometry Box {
-        size 0.1 0.1 0.1
+      geometry Cylinder {
+        height 0.2
+        radius 0.05
       }
     }
   ]
@@ -135,4 +79,21 @@ Solid {
   }
   physics Physics {
   }
+}
+Irb4600-40 {
+  translation 2.72729 -0.0919214 0.504528
+  rotation 0.6110202944767682 -0.6036018181110492 -0.5121709137685966 -2.2029335594172705
+  controller ""
+  supervisor TRUE
+  staticBase TRUE
+}
+UR5e {
+  translation 1.06505 0.69 -0.873014
+  rotation -1 -9.58979e-09 1.87158e-06 1.5708
+  controller "<extern>"
+  supervisor TRUE
+  toolSlot [
+    Robotiq3fGripper {
+    }
+  ]
 }
